@@ -1,6 +1,6 @@
-## Section 2 - Good floorplan vs bad floorplan and introduction to library cells (16/03/2024 - 17/03/2024)
+# Good floorplan vs bad floorplan and introduction to library cells 
 
-### Theory
+## Theory
 
 ### Implementation
 
@@ -15,28 +15,21 @@ Section 2 tasks:-
 Area\ of\ die\ in\ microns = Die\ width\ in\ microns * Die\ height\ in\ microns
 ```
 
-* All section 2 logs, reports and results can be found in following run folder:
-
-[Section 2 Run - 17-03_12-06](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_12-06)
-
 #### 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
 
 Commands to invoke the OpenLANE flow and perform floorplan
 
 ```bash
 # Change directory to openlane flow directory
-cd Desktop/work/tools/openlane_working_dir/openlane
-
-# alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
-# Since we have aliased the long command to 'docker' we can invoke the OpenLANE flow docker sub-system by just running this command
-docker
+cd Desktop/Openlane
+make mount
 ```
 ```tcl
 # Now that we have entered the OpenLANE flow contained docker sub-system we can invoke the OpenLANE flow in the Interactive mode using the following command
 ./flow.tcl -interactive
 
 # Now that OpenLANE flow is open we have to input the required packages for proper functionality of the OpenLANE flow
-package require openlane 0.9
+package require openlane 
 
 # Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
 prep -design picorv32a
@@ -56,29 +49,29 @@ Screenshot of floorplan run
 
 Screenshot of contents of floorplan def
 
-![Screenshot from 2024-03-17 18-34-53](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_2/images/flooorplan_def_file.png)
+![Screenshot from 2024-03-17 18-34-53](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_2/images/floorplan_def_file.png)
 
 According to floorplan def
 ```math
 1000\ Unit\ Distance = 1\ Micron
 ```
 ```math
-Die\ width\ in\ unit\ distance = 660685 - 0 = 660685
+Die\ width\ in\ unit\ distance = 528755 - 0 = 528755
 ```
 ```math
-Die\ height\ in\ unit\ distance = 671405 - 0 = 671405
+Die\ height\ in\ unit\ distance = 539475 - 0 = 539475
 ```
 ```math
 Distance\ in\ microns = \frac{Value\ in\ Unit\ Distance}{1000}
 ```
 ```math
-Die\ width\ in\ microns = \frac{660685}{1000} = 660.685\ Microns
+Die\ width\ in\ microns = \frac{528755}{1000} = 526.755\ Microns
 ```
 ```math
-Die\ height\ in\ microns = \frac{671405}{1000} = 671.405\ Microns
+Die\ height\ in\ microns = \frac{5394755}{1000} = 539.475\ Microns
 ```
 ```math
-Area\ of\ die\ in\ microns = 660.685 * 671.405 = 443587.212425\ Square\ Microns
+Area\ of\ die\ in\ microns = 526.755 * 539.475 = 284171.1536\ Square\ Microns
 ```
 
 #### 3. Load generated floorplan def in magic tool and explore the floorplan.
@@ -87,10 +80,10 @@ Commands to load floorplan def in magic in another terminal
 
 ```bash
 # Change directory to path containing generated floorplan def
-cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_12-06/results/floorplan/
+cd Desktop/openlane/designs/picorv32a/runs/17-03_12-06/results/floorplan/
 
 # Command to load the floorplan def in magic tool
-magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
 ```
 
 Screenshots of floorplan def in magic
@@ -138,10 +131,10 @@ Commands to load placement def in magic in another terminal
 
 ```bash
 # Change directory to path containing generated placement def
-cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_12-06/results/placement/
+cd Desktop/Openlane/designs/picorv32a/runs/17-03_12-06/results/placement/
 
 # Command to load the placement def in magic tool
-magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
 ```
 
 Screenshots of floorplan def in magic
