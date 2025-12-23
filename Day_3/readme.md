@@ -93,14 +93,10 @@ Screenshot of created spice file
 
 ### 4. Editing the spice model file for analysis through simulation.
 
-Measuring unit distance in layout grid
-
-![Screenshot from 2024-03-19 01-30-15](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/74335564-b7a6-4b7d-b4b7-bb251c8d790b)
-
 Final edited spice file ready for ngspice simulation
 
-![Screenshot from 2024-03-19 14-50-54](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/b5d20507-b65e-4b54-ba8e-576fb4d09429)
-![Screenshot from 2024-03-19 14-51-16](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/9cd17c95-de5b-48da-b8bc-2ee0c30915ef)
+![Screenshot from 2024-03-19 14-50-54](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_3/images/changes_in_spicefile.png)
+
 
 ### 5. Post-layout ngspice simulations.
 
