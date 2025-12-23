@@ -89,7 +89,7 @@ Screenshot of tkcon window after running above commands
 
 Screenshot of created spice file
 
-![Screenshot from 2024-03-19 01-27-07](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/2c645f55-c4d5-4007-8b9c-73ba8a8e5bcb)
+![Screenshot from 2024-03-19 01-27-07](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_3/images/normal_spice_file.png)
 
 ### 4. Editing the spice model file for analysis through simulation.
 
