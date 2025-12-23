@@ -1,8 +1,8 @@
-## Section 3 - Design library cell using Magic Layout and ngspice characterization (18/03/2024 - 21/03/2024)
+# Design library cell using Magic Layout and ngspice characterization (18/03/2024 - 21/03/2024)
 
-### Theory
+## Theory
 
-### Implementation
+## Implementation
 
 * Section 3 tasks:-
 1. Clone custom inverter standard cell design from github repository: [Standard cell design and characterization using OpenLANE flow](https://github.com/nickson-jose/vsdstdcelldesign).
@@ -12,15 +12,7 @@
 5. Post-layout ngspice simulations.
 6. Find problem in the DRC section of the old magic tech file for the skywater process and fix them.
 
-* Section 3 - Tasks 1 to 5 files, reports and logs can be found in the following folder:
-
-[Section 3 - Tasks 1 to 5 \(vsdstdcelldesign\)](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign)
-
-* Section 3 - Task 6 files, reports and logs can be found in the following folder:
-
-[Section 3 - Task 6 \(drc_tests\)](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/tree/main/drc_tests)
-
-#### 1. Clone custom inverter standard cell design from github repository
+### 1. Clone custom inverter standard cell design from github repository
 
 ```bash
 # Change directory to openlane
@@ -46,7 +38,7 @@ Screenshot of commands run
 
 ![Screenshot from 2024-03-19 00-22-27](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/8f304929-a190-4aa1-9cc4-b8fefa1909e8)
 
-#### 2. Load the custom inverter layout in magic and explore.
+### 2. Load the custom inverter layout in magic and explore.
 
 Screenshot of custom inverter layout in magic
 
@@ -73,7 +65,7 @@ Deleting necessary layout part to see DRC error
 
 ![Screenshot from 2024-03-19 01-10-28](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/861912e4-eef9-4226-b563-db7f49ca6632)
 
-#### 3. Spice extraction of inverter in magic.
+### 3. Spice extraction of inverter in magic.
 
 Commands for spice extraction of the custom inverter layout to be used in tkcon window of magic
 
@@ -99,7 +91,7 @@ Screenshot of created spice file
 
 ![Screenshot from 2024-03-19 01-27-07](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/2c645f55-c4d5-4007-8b9c-73ba8a8e5bcb)
 
-#### 4. Editing the spice model file for analysis through simulation.
+### 4. Editing the spice model file for analysis through simulation.
 
 Measuring unit distance in layout grid
 
@@ -110,7 +102,7 @@ Final edited spice file ready for ngspice simulation
 ![Screenshot from 2024-03-19 14-50-54](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/b5d20507-b65e-4b54-ba8e-576fb4d09429)
 ![Screenshot from 2024-03-19 14-51-16](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/9cd17c95-de5b-48da-b8bc-2ee0c30915ef)
 
-#### 5. Post-layout ngspice simulations.
+### 5. Post-layout ngspice simulations.
 
 Commands for ngspice simulation
 
@@ -219,7 +211,7 @@ Fall\ Cell\ Delay = Time\ taken\ for\ output\ to\ fall\ to\ 50\% - Time\ taken\ 
 Fall\ Cell\ Delay = 4.07 - 4.05 = 0.02\ ns = 20\ ps
 ```
 
-#### 6. Find problem in the DRC section of the old magic tech file for the skywater process and fix them.
+### 6. Find problem in the DRC section of the old magic tech file for the skywater process and fix them.
 
 Link to Sky130 Periphery rules: [https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html](https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html)
 
