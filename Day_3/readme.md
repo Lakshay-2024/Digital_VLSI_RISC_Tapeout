@@ -1,10 +1,10 @@
-# Design library cell using Magic Layout and ngspice characterization (18/03/2024 - 21/03/2024)
+# Design library cell using Magic Layout and ngspice characterization
 
 ## Theory
 
 ## Implementation
 
-* Section 3 tasks:-
+* Tasks:-
 1. Clone custom inverter standard cell design from github repository: [Standard cell design and characterization using OpenLANE flow](https://github.com/nickson-jose/vsdstdcelldesign).
 2. Load the custom inverter layout in magic and explore.
 3. Spice extraction of inverter in magic.
