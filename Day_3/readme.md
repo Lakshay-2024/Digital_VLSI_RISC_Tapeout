@@ -16,7 +16,7 @@
 
 ```bash
 # Change directory to openlane
-cd Desktop/work/tools/openlane_working_dir/openlane
+cd Desktop/openlane
 
 # Clone the repository with custom inverter design
 git clone https://github.com/nickson-jose/vsdstdcelldesign
@@ -34,9 +34,6 @@ ls
 magic -T sky130A.tech sky130_inv.mag &
 ```
 
-Screenshot of commands run
-
-![Screenshot from 2024-03-19 00-22-27](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/8f304929-a190-4aa1-9cc4-b8fefa1909e8)
 
 ### 2. Load the custom inverter layout in magic and explore.
 
