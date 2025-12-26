@@ -340,10 +340,7 @@ sta pre_sta.conf
 
 Screenshots of commands run
 
-![Screenshot from 2024-03-26 06-04-28](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/32def177-5173-4dd7-ba3b-44e37846644c)
-![Screenshot from 2024-03-26 06-05-07](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/d8b8c46a-3a8b-458c-8c75-03f6577f5d17)
-![Screenshot from 2024-03-26 06-05-53](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/ab396c91-430f-41ca-b9a4-dda72a91c4d5)
-![Screenshot from 2024-03-26 06-08-51](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/aa1d50b0-9cb1-45bf-a641-b64842166b48)
+![Screenshot from 2024-03-26 06-04-28](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/p1.png)
 
 Since more fanout is causing more delay we can add parameter to reduce fanout and do synthesis again
 
@@ -351,7 +348,7 @@ Commands to include new lef and perform synthesis
 
 ```tcl
 # Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
-prep -design picorv32a -tag 25-03_18-52 -overwrite
+prep -design picorv32a 
 
 # Adiitional commands to include newly added lef to openlane flow
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
@@ -370,15 +367,11 @@ echo $::env(SYNTH_DRIVING_CELL)
 run_synthesis
 ```
 
-Commands run final screenshot
 
-![Screenshot from 2024-03-26 06-20-29](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/c5869cf5-ab95-46f9-9fd1-dc91e92455d8)
-
-Commands to run STA in another terminal
 
 ```bash
 # Change directory to openlane
-cd Desktop/work/tools/openlane_working_dir/openlane
+cd Desktop/Openlane
 
 # Command to invoke OpenSTA tool with script
 sta pre_sta.conf
@@ -386,16 +379,14 @@ sta pre_sta.conf
 
 Screenshots of commands run
 
-![Screenshot from 2024-03-26 06-22-31](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/0f3247fc-aaad-4e98-b23e-bdc9a361d08c)
-![Screenshot from 2024-03-26 06-22-41](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/9fcc3975-0e03-4515-aee5-04b7c1c6a315)
-![Screenshot from 2024-03-26 06-22-50](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/e19db773-3995-4af4-b0a3-188b02fdf454)
-![Screenshot from 2024-03-26 06-23-01](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/c22c85fb-1a94-4639-a731-da4c364d1a78)
+![Screenshot from 2024-03-26 06-22-31](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/p3.png)
+
 
 #### 10. Make timing ECO fixes to remove all violations.
 
 OR gate of drive strength 2 is driving 4 fanouts
 
-![Screenshot from 2024-03-26 06-55-46](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/73c58332-a212-4a24-b853-e8cae3b385a6)
+![Screenshot from 2024-03-26 06-55-46](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/p4.png)
 
 Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
 
@@ -415,14 +406,11 @@ report_checks -fields {net cap slew input_pins} -digits 4
 
 Result - slack reduced
 
-![Screenshot from 2024-03-26 07-02-44](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/c50c6023-1836-468d-a8c3-955b02e4224c)
-![Screenshot from 2024-03-26 07-04-08](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/6059a511-9977-4d9e-8dde-8939f0e1b8f7)
-![Screenshot from 2024-03-26 09-42-15](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/df3dba3c-9445-4d51-9842-bf4410f05cf5)
-![Screenshot from 2024-03-26 07-07-50](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/f141d1ff-4e21-4f9a-ab47-19579a686ac4)
+![Screenshot from 2024-03-26 07-02-44](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/p5.png)
 
 OR gate of drive strength 2 is driving 4 fanouts
 
-![Screenshot from 2024-03-26 09-46-23](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/3f66eed9-c43d-483e-ab85-21d70452b81f)
+![Screenshot from 2024-03-26 09-46-23](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/p6.png)
 
 Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
 
@@ -439,31 +427,8 @@ report_checks -fields {net cap slew input_pins} -digits 4
 
 Result - slack reduced
 
-![Screenshot from 2024-03-26 09-49-29](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/d896c1fa-078e-4fe1-8e4d-60fae870d672)
-![Screenshot from 2024-03-26 09-50-13](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/a21abd89-b92a-4d28-b065-6b8b523026de)
-![Screenshot from 2024-03-26 09-50-33](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/9b961126-3de7-450e-9789-5009ca7f6a16)
+![Screenshot from 2024-03-26 09-49-29](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/p7.png)
 
-OR gate of drive strength 2 driving OA gate has more delay
-
-![Screenshot from 2024-03-26 10-22-10](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/7669eeef-7b93-4cfd-a152-17eec772496a)
-
-Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
-
-```tcl
-# Reports all the connections to a net
-report_net -connections _11643_
-
-# Replacing cell
-replace_cell _14481_ sky130_fd_sc_hd__or4_4
-
-# Generating custom timing report
-report_checks -fields {net cap slew input_pins} -digits 4
-```
-
-Result - slack reduced
-
-![Screenshot from 2024-03-26 10-29-31](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/c63cf6a1-582d-43e5-907f-e292b94cc086)
-![Screenshot from 2024-03-26 10-29-55](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/6495c2e8-78c8-41d2-b783-628f36b982c5)
 
 OR gate of drive strength 2 driving OA gate has more delay
 
