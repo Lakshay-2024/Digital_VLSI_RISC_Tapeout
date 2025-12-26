@@ -227,7 +227,7 @@ run_synthesis
 
 Screenshot of merged.lef in `tmp` directory with our custom inverter as macro
 
-![Screenshot from 2024-03-24 23-46-25](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/marco_added_in_merged_file.png)
+![Screenshot from 2024-03-24 23-46-25](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/macro_added_in_merged_file.png)
 
 
 
