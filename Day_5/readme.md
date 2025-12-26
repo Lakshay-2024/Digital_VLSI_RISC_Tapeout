@@ -94,14 +94,13 @@ magic -T /home/vscode/.ciel/sky130A/libs.tech/magic/sky130A.tech lef read ../../
 
 Screenshots of routed def
 
-![Screenshot from 2024-03-26 15-33-12](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/6eade230-eb96-4d7b-b7a9-7a7db9c2c8b7)
-![Screenshot from 2024-03-26 15-30-36](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/b1900c55-7470-41b2-8b4f-3af871494d99)
-![Screenshot from 2024-03-26 15-31-29](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/5faaca5b-fb6e-4abd-946d-6531b35489b8)
-![Screenshot from 2024-03-26 15-32-20](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/594ef79b-4755-4934-a087-33fb24996526)
+![Screenshot from 2024-03-26 15-33-12](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_5/images/routed_design1.png)
+![Screenshot from 2024-03-26 15-30-36](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_5/images/routed_design2.png)
+![Screenshot from 2024-03-26 15-31-29](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_5/images/routed_design3.png)
 
 Screenshot of fast route guide present in `/home/lakshay/vsdflow/OpenLane/designs/picorv32a/runs/RUN_2025.12.26_13.02.52/tmp/routing` directory
 
-![Screenshot from 2024-03-26 15-41-18](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/1dc38a57-03c9-45c3-acdb-063731a86433)
+![Screenshot from 2024-03-26 15-41-18](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_5/images/fast_route_file.png)
 
 #### 3. Post-Route parasitic extraction using SPEF extractor.
 
