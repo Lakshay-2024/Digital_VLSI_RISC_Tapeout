@@ -39,7 +39,7 @@ magic -T sky130A.tech sky130_inv.mag &
 
 Screenshot of tracks.info of sky130_fd_sc_hd
 
-![Screenshot from 2024-03-24 13-38-09](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/2a35eb22-dd5f-4b67-9712-cbd2a84b526a)
+![Screenshot from 2024-03-24 13-38-09](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/tracks_info.png)
 
 Commands for tkcon window to set grid as tracks of locali layer
 
@@ -57,7 +57,7 @@ Screenshot of commands run
 
 Condition 1 verified
 
-![Screenshot from 2024-03-24 13-51-55](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/b74b31c8-cdc7-4dcb-9467-5a1787bfa5fe)
+![Screenshot from 2024-03-24 13-51-55](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/condition1_verified.png)
 
 Condition 2 verified
 
@@ -65,7 +65,7 @@ Condition 2 verified
 Horizontal\ track\ pitch = 0.46\ um
 ```
 
-![Screenshot from 2024-03-24 13-55-07](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/e045e5b6-3592-4242-995d-de2049438ec5)
+![Screenshot from 2024-03-24 13-55-07](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/horizontal_track_pitch.png)
 
 ```math
 Width\ of\ standard\ cell = 1.38\ um = 0.46 * 3
@@ -77,7 +77,7 @@ Condition 3 verified
 Vertical\ track\ pitch = 0.34\ um
 ```
 
-![Screenshot from 2024-03-24 13-58-32](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/a471b022-91ac-466a-8dd9-72b90f9c16c1)
+![Screenshot from 2024-03-24 13-58-32](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/vertical_track_pitch.png)
 
 ```math
 Height\ of\ standard\ cell = 2.72\ um = 0.34 * 8
@@ -101,7 +101,7 @@ magic -T sky130A.tech sky130_vsdinv.mag &
 
 Screenshot of newly saved layout
 
-![Screenshot from 2024-03-24 14-33-20](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/0beb4300-2ebc-4364-8e3d-37fdb6d52f5b)
+![Screenshot from 2024-03-24 14-33-20](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/newly_saved_cell.png)
 
 #### 3. Generate lef from the layout.
 
@@ -114,11 +114,11 @@ lef write
 
 Screenshot of command run
 
-![Screenshot from 2024-03-24 14-35-55](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/6928c3dc-e633-414d-9ac1-71349cad4b9b)
+![Screenshot from 2024-03-24 14-35-55](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/generating_lef.png)
 
 Screenshot of newly created lef file
 
-![Screenshot from 2024-03-24 14-37-19](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/15557990-33b4-4402-8c72-39b75da9ed07)
+![Screenshot from 2024-03-24 14-37-19](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/gedit_lef_file.png)
 
 #### 4. Copy the newly generated lef and associated required lib files to 'picorv32a' design 'src' directory.
 
@@ -126,21 +126,19 @@ Commands to copy necessary files to 'picorv32a' design 'src' directory
 
 ```bash
 # Copy lef file
-cp sky130_vsdinv.lef ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+cp sky130_vsdinv.lef ~/Desktop/Openlane/designs/picorv32a/src/
 
 # List and check whether it's copied
-ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+ls ~/Desktop/Openlane/designs/picorv32a/src/
 
 # Copy lib files
-cp libs/sky130_fd_sc_hd__* ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+cp libs/sky130_fd_sc_hd__* ~/Desktop/Openlane/designs/picorv32a/src/
 
 # List and check whether it's copied
-ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+ls ~/Desktop/Openlane/designs/picorv32a/src/
 ```
 
-Screenshot of commands run
 
-![Screenshot from 2024-03-24 14-55-23](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/78559cee-ad3f-4301-83ae-df99f8417be3)
 
 #### 5. Edit 'config.tcl' to change lib file and add the new extra lef into the openlane flow.
 
@@ -157,7 +155,7 @@ set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/sr
 
 Edited config.tcl to include the added lef and change library to ones we added in src directory
 
-![Screenshot from 2024-03-24 15-29-56](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/7b18f216-1160-4a65-91fd-998495ad3175)
+![Screenshot from 2024-03-24 15-29-56](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/changes_in_conf_file.png)
 
 #### 6. Run openlane flow synthesis with newly inserted custom inverter cell.
 
@@ -165,18 +163,15 @@ Commands to invoke the OpenLANE flow include new lef and perform synthesis
 
 ```bash
 # Change directory to openlane flow directory
-cd Desktop/work/tools/openlane_working_dir/openlane
-
-# alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
-# Since we have aliased the long command to 'docker' we can invoke the OpenLANE flow docker sub-system by just running this command
-docker
+cd Desktop/Openlane
+make mount
 ```
 ```tcl
 # Now that we have entered the OpenLANE flow contained docker sub-system we can invoke the OpenLANE flow in the Interactive mode using the following command
 ./flow.tcl -interactive
 
 # Now that OpenLANE flow is open we have to input the required packages for proper functionality of the OpenLANE flow
-package require openlane 0.9
+package require openlane 
 
 # Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
 prep -design picorv32a
@@ -189,12 +184,7 @@ add_lefs -src $lefs
 run_synthesis
 ```
 
-Screenshots of commands run
 
-![Screenshot from 2024-03-24 15-36-46](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/4170c3c5-1a95-4165-9461-03b298cc20ef)
-![Screenshot from 2024-03-24 15-37-32](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/8f52942c-4b28-4abd-b9a0-d48f20a8255f)
-![Screenshot from 2024-03-24 15-37-44](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/47849bfd-dc47-4d9c-9077-7fb672df4ead)
-![Screenshot from 2024-03-24 15-45-08](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/0bc13ad3-d800-4681-b39d-8b64c9c9104f)
 
 #### 7. Remove/reduce the newly introduced violations with the introduction of custom inverter cell by modifying design parameters.
 
@@ -237,7 +227,7 @@ run_synthesis
 
 Screenshot of merged.lef in `tmp` directory with our custom inverter as macro
 
-![Screenshot from 2024-03-24 23-46-25](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/55de3fc6-498d-4456-8e79-ae6e175d2ca6)
+![Screenshot from 2024-03-24 23-46-25](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/marco_added_in_merged_file.png)
 
 
 
@@ -277,11 +267,11 @@ magic -T /home/vscode/.ciel/sky130A/libs.tech/magic/sky130A.tech lef read ../../
 
 Screenshot of placement def in magic
 
-![Screenshot from 2024-03-25 00-16-54](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/9cb8b463-a0dd-402f-b881-2504686b8d04)
+![Screenshot from 2024-03-25 00-16-54](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/placed_design.png)
 
 Screenshot of custom inverter inserted in placement def with proper abutment
 
-![Screenshot from 2024-03-25 00-00-10](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/2fb0fc71-4784-4987-a55e-5d71dd35edbf)
+![Screenshot from 2024-03-25 00-00-10](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/custom_inerter_in_placement.png)
 
 Command for tkcon window to view internal layers of cells
 
@@ -292,8 +282,8 @@ expand
 
 Abutment of power pins with other cell from library clearly visible
 
-![Screenshot from 2024-03-25 00-01-46](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/b52d756d-430c-4e43-b514-db0084dc1794)
-![Screenshot from 2024-03-25 00-05-35](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/b8342668-c3fe-437e-b701-8c8be3740682)
+![Screenshot from 2024-03-25 00-01-46](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/expanded_layout.png)
+
 
 #### 9. Do Post-Synthesis timing analysis with OpenSTA tool.
 
@@ -303,7 +293,7 @@ Commands to invoke the OpenLANE flow include new lef and perform synthesis
 
 ```bash
 # Change directory to openlane flow directory
-cd Desktop/work/tools/openlane_working_dir/openlane
+cd Desktop/Openlane
 make mount
 ```
 ```tcl
