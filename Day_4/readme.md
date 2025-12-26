@@ -269,7 +269,7 @@ Commands to load placement def in magic in another terminal
 
 ```bash
 # Change directory to path containing generated placement def
-cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/24-03_10-03/results/placement/
+cd /OpenLane/designs/picorv32a/runs/RUN_2025.12.26_13.02.52/results/placement/
 
 # Command to load the placement def in magic tool
 magic -T /home/vscode/.ciel/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
