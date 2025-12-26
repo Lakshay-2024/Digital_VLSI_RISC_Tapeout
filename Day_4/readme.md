@@ -330,10 +330,7 @@ Commands to invoke the OpenLANE flow include new lef and perform synthesis
 ```bash
 # Change directory to openlane flow directory
 cd Desktop/work/tools/openlane_working_dir/openlane
-
-# alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
-# Since we have aliased the long command to 'docker' we can invoke the OpenLANE flow docker sub-system by just running this command
-docker
+make mount
 ```
 ```tcl
 # Now that we have entered the OpenLANE flow contained docker sub-system we can invoke the OpenLANE flow in the Interactive mode using the following command
@@ -356,24 +353,22 @@ set ::env(SYNTH_SIZING) 1
 run_synthesis
 ```
 
-Commands run final screenshot
 
-![Screenshot from 2024-03-26 05-52-18](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/790d4852-7f1d-47b5-a64f-5735f6064b61)
 
 Newly created `pre_sta.conf` for STA analysis in `openlane` directory
 
-![Screenshot from 2024-03-26 05-53-06](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/0a02d055-f012-44bd-a750-4508bbfc771e)
+![Screenshot from 2024-03-26 05-53-06](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/pre_sta.png)
 
 Newly created `my_base.sdc` for STA analysis in `openlane/designs/picorv32a/src` directory based on the file `openlane/scripts/base.sdc`
 
-![Screenshot from 2024-03-26 05-55-17](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/8c917d87-5507-4079-ba6b-facbf18c238f)
-![Screenshot from 2024-03-26 05-55-38](https://github.com/fayizferosh/soc-design-and-planning-nasscom-vsd/assets/63997454/e07d05db-2f06-47ab-bff7-2af88c39d001)
+![Screenshot from 2024-03-26 05-55-17](https://github.com/Lakshay-2024/Digital_VLSI_RISC_Tapeout/blob/main/Day_4/images/my_base.png)
+
 
 Commands to run STA in another terminal
 
 ```bash
 # Change directory to openlane
-cd Desktop/work/tools/openlane_working_dir/openlane
+cd Desktop/Openlane
 
 # Command to invoke OpenSTA tool with script
 sta pre_sta.conf
