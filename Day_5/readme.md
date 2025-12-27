@@ -1,6 +1,6 @@
 # Final steps for RTL2GDS using tritonRoute and openSTA 
 
-## Theory
+
 
 ### Implementation
 
