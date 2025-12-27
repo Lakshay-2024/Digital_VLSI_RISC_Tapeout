@@ -83,7 +83,7 @@ Commands to load floorplan def in magic in another terminal
 cd Desktop/openlane/designs/picorv32a/runs/17-03_12-06/results/floorplan/
 
 # Command to load the floorplan def in magic tool
-magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
+magic -T /home/vscode/.ciel/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
 ```
 
 Screenshots of floorplan def in magic
@@ -134,7 +134,7 @@ Commands to load placement def in magic in another terminal
 cd Desktop/Openlane/designs/picorv32a/runs/17-03_12-06/results/placement/
 
 # Command to load the placement def in magic tool
-magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
+magic -T /home/vscode/.ciel/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
 ```
 
 Screenshots of floorplan def in magic
