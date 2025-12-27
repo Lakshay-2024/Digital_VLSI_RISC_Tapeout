@@ -14,7 +14,7 @@ This repository documents my **daywise progress** with tasks and assignments ins
 | Task | Description | 
 |------|-------------|
 | **DAY 1** |  [Physical Design Flow and Synthesis of RISCV core](Day_1/readme.md) | 
-| **DAY 2** |  [Synthesis & GLS](Day_2/readme.md) |
+| **DAY 2** |  [Floorplanning and Placement](Day_2/readme.md) |
 | **DAY 3** |  [SoC Fundamentals and Modelling](Day_3/readme.md)
 | **DAY 4** |  [Post Synthesis Simulation and STA Analysis](Day_4/readme.md)
 | **DAY 5** |  [CMOS SPICE Simulation](Day_5/readme.md)
@@ -25,11 +25,10 @@ This repository documents my **daywise progress** with tasks and assignments ins
 - Synthesis of RISCV core using **Yosys** synthesiser in the Openlane .  
 - Calculation of **Flop Ratio** in the synthesised netlist.
 
-###  Key Learnings from Week 1
-- Verilog **RTL design** and simulation.  
-- Using **Icarus Verilog and GTKWave** for simulation and waveform analysis.  
-- Logic synthesis using **Yosys and the SKY130 open-source PDK**.
-- Key digital design concepts: testbenches, timing libraries, D flip-flop coding styles, and **optimization techniques**.
+###  Key Learnings from Day 2
+- Understand the theory behind **Floorplan and Placement**.  
+- Run floorplan for the RISCV core , calculate **die area** and understand the floorplan layout.  
+- Run placement for the design and understand various **library cells** in the placed design.
 
 ### Key Learnings from Week 2
 - Fundamental understanding of **SoC Designing** and Structure.
